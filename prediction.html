@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Prediction | FuturePath AI</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+  
+  <div class="dashboard-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo-wrapper">
+          <svg class="sidebar-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L4 14L24 24L44 14L24 4Z" fill="url(#sidebarLogoGrad)" />
+            <path d="M4 24V34L24 44V34L4 24Z" fill="#4F46E5" />
+            <path d="M44 24V34L24 44V34L44 24Z" fill="#818CF8" />
+            <defs>
+              <linearGradient id="sidebarLogoGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4F46E5" />
+                <stop offset="1" stop-color="#818CF8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-name">FuturePath AI</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          <span>Career Explorer</span>
+        </a>
+        <a href="prediction.html" class="menu-item active">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span>Predictions</span>
+        </a>
+        <a href="documentation.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Documentation</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Info / Logout -->
+      <div class="sidebar-footer">
+        <div class="user-block">
+          <div class="sidebar-avatar">AM</div>
+          <div class="user-details">
+            <span class="user-name">Alex Mercer</span>
+            <span class="user-role">Student account</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <svg class="logout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      
+      <!-- Top Navigation Header -->
+      <header class="top-nav">
+        <!-- Sidebar Toggle Hamburger (Mobile only) -->
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search parameters..." class="search-input" disabled>
+        </div>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          
+          <!-- Alerts Bell -->
+          <div class="alert-bell-container" id="notificationBtn">
+            <button class="bell-btn" aria-label="Notifications">
+              <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="bell-badge" style="display: none;">0</span>
+            </button>
+          </div>
+
+          <!-- User Quick Menu -->
+          <div class="avatar-block">
+            <div class="nav-avatar">AM</div>
+            <span class="nav-username">Alex Mercer</span>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Main Prediction Form Content -->
+      <main class="dashboard-content">
+        
+        <!-- Welcome Header -->
+        <div class="welcome-header animate-fade-in">
+          <h1 class="welcome-title">AI Career Trajectory Pathfinder</h1>
+          <p class="welcome-subtitle">Calibrate your profile attributes, skills, and interests. Our model compiles this data against market demands to project your optimal trajectory.</p>
+        </div>
+
+        <!-- Assessment Form Card -->
+        <section class="prediction-form-section animate-fade-in delay-100">
+          <div class="premium-form-card">
+            
+            <form id="predictionForm" novalidate>
+              
+              <!-- Slider 1: CGPA -->
+              <div class="form-row range-row">
+                <div class="label-heading-row">
+                  <label for="cgpa" class="form-section-label">Cumulative GPA (CGPA)</label>
+                  <span class="range-bubble-indicator" id="cgpaVal">7.5</span>
+                </div>
+                <div class="range-input-wrapper">
+                  <input type="range" id="cgpa" name="cgpa" min="0.0" max="10.0" step="0.1" value="7.5" class="premium-range-slider">
+                  <div class="range-milestones">
+                    <span>0.0</span>
+                    <span>5.0</span>
+                    <span>10.0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Choice Cards: Coding Skill Level -->
+              <div class="form-row card-choice-row">
+                <label class="form-section-label">Coding & Software Construction Skill</label>
+                <p class="field-help-text">Select the category that best aligns with your programming competency and codebase creations.</p>
+                <input type="hidden" id="codingSkill" name="codingSkill" value="" required>
+                
+                <div class="choice-cards-grid" id="codingChoiceGrid">
+                  
+                  <div class="choice-card" data-value="beginner">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-wd">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Beginner</h5>
+                      <p>Basic syntax, standard loops, script creations, class logic foundations.</p>
+                    </div>
+                  </div>
+
+                  <div class="choice-card" data-value="intermediate">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-cloud">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Intermediate</h5>
+                      <p>Data structures, clean OOP frameworks, web apps, API building, SQL.</p>
+                    </div>
+                  </div>
+
+                  <div class="choice-card" data-value="advanced">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-ai">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Advanced / Expert</h5>
+                      <p>Algorithms complexity, microservices dev, design patterns, ML models, systems design.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <span class="error-msg" id="coding-error">Please select your coding skill level</span>
+              </div>
+
+              <!-- Choice Cards: Communication Skill Level -->
+              <div class="form-row card-choice-row">
+                <label class="form-section-label">Communication & Collaboration Skill</label>
+                <p class="field-help-text">Evaluate your efficiency in writing technical briefs, client communications, and working in agile teams.</p>
+                <input type="hidden" id="commSkill" name="commSkill" value="" required>
+                
+                <div class="choice-cards-grid" id="commChoiceGrid">
+                  
+                  <div class="choice-card" data-value="developing">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-cs">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Developing</h5>
+                      <p>Prefers written issues, works best with clear task instructions, growing confidence.</p>
+                    </div>
+                  </div>
+
+                  <div class="choice-card" data-value="competent">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-uiux">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Competent</h5>
+                      <p>Clear documentation writer, active daily standup partner, smooth team collaborator.</p>
+                    </div>
+                  </div>
+
+                  <div class="choice-card" data-value="excellent">
+                    <div class="choice-circle"></div>
+                    <div class="choice-icon-wrap color-wd">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg>
+                    </div>
+                    <div class="choice-content">
+                      <h5>Highly Effective</h5>
+                      <p>Confident presenter, client-facing coordinator, resolves structural team conflicts.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <span class="error-msg" id="comm-error">Please select your communication skill level</span>
+              </div>
+
+              <!-- Slider 2: Aptitude Level -->
+              <div class="form-row range-row">
+                <div class="label-heading-row">
+                  <label for="aptitude" class="form-section-label">Logical & Quantitative Aptitude Level</label>
+                  <span class="range-bubble-indicator" id="aptitudeVal">75%</span>
+                </div>
+                <div class="range-input-wrapper">
+                  <input type="range" id="aptitude" name="aptitude" min="0" max="100" step="1" value="75" class="premium-range-slider">
+                  <div class="range-milestones">
+                    <span>0% (Foundational)</span>
+                    <span>50%</span>
+                    <span>100% (High Analytical)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dropdown Select: Interest Area -->
+              <div class="form-row dropdown-row">
+                <label for="interestArea" class="form-section-label">Core Technical Interest Discipline</label>
+                <p class="field-help-text">Which domain of research or technology aligns closest with your career goals?</p>
+                <div class="dropdown-wrapper">
+                  <select id="interestArea" name="interestArea" class="form-select-dropdown" required>
+                    <option value="" disabled selected>Choose interest area...</option>
+                    <option value="ai">Artificial Intelligence & Model Engineering</option>
+                    <option value="ds">Data Science & Statistical Insights</option>
+                    <option value="wd">Web Engineering & Application Platforms</option>
+                    <option value="cs">Cybersecurity Systems & Threat Defense</option>
+                    <option value="uiux">Product Interface Strategy (UI/UX)</option>
+                    <option value="cloud">Cloud Architectures & Infrastructure Operations</option>
+                  </select>
+                  <svg class="dropdown-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+                <span class="error-msg" id="interest-error">Please select your primary technical interest discipline</span>
+              </div>
+
+              <!-- Submit Predict Career Button -->
+              <div class="form-submit-row">
+                <button type="submit" class="submit-btn" id="submitPredictBtn">
+                  <span class="btn-text">Predict Career Trajectory</span>
+                  <!-- Ripple element placeholder -->
+                  <span class="btn-ripple-container"></span>
+                  <!-- Spinner Icon -->
+                  <svg class="btn-spinner" id="btnSpinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <line x1="12" y1="2" x2="12" y2="6"></line>
+                    <line x1="12" y1="18" x2="12" y2="22"></line>
+                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                    <line x1="2" y1="12" x2="6" y2="12"></line>
+                    <line x1="18" y1="12" x2="22" y2="12"></line>
+                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                  </svg>
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Dashboard Footer -->
+      <footer class="dashboard-footer-bar">
+        <p>© 2026 FuturePath AI. All rights reserved. Guiding academic and career success through intelligent analytics.</p>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Custom JS for Prediction form page -->
+  <script src="shared.js"></script>
+  <script src="prediction.js"></script>
+</body>
+</html>

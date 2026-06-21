@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | FuturePath AI</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+  
+  <div class="dashboard-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo-wrapper">
+          <svg class="sidebar-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L4 14L24 24L44 14L24 4Z" fill="url(#sidebarLogoGrad)" />
+            <path d="M4 24V34L24 44V34L4 24Z" fill="#4F46E5" />
+            <path d="M44 24V34L24 44V34L44 24Z" fill="#818CF8" />
+            <defs>
+              <linearGradient id="sidebarLogoGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4F46E5" />
+                <stop offset="1" stop-color="#818CF8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-name">FuturePath AI</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item active">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          <span>Career Explorer</span>
+        </a>
+        <a href="prediction.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span>Predictions</span>
+        </a>
+        <a href="documentation.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Documentation</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Info / Logout -->
+      <div class="sidebar-footer">
+        <div class="user-block">
+          <div class="sidebar-avatar">AM</div>
+          <div class="user-details">
+            <span class="user-name">Alex Mercer</span>
+            <span class="user-role">Student account</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <svg class="logout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      
+      <!-- Top Navigation Header -->
+      <header class="top-nav">
+        <!-- Sidebar Toggle Hamburger (Mobile only) -->
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search career categories, predictions..." class="search-input">
+        </div>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          
+          <!-- Alerts Bell -->
+          <div class="alert-bell-container" id="notificationBtn">
+            <button class="bell-btn" aria-label="Notifications">
+              <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="bell-badge">3</span>
+            </button>
+            
+            <!-- Notification Dropdown -->
+            <div class="notification-dropdown" id="notificationDropdown">
+              <div class="dropdown-header">
+                <h3>Notifications</h3>
+                <span class="mark-read">Mark all as read</span>
+              </div>
+              <div class="dropdown-list">
+                <div class="notification-item unread">
+                  <div class="notif-bullet"></div>
+                  <div class="notif-details">
+                    <p class="notif-text">Your AI Affinity Score for <strong>Cloud Engineer</strong> rose by 5% based on your latest skill logs.</p>
+                    <span class="notif-time">2 hours ago</span>
+                  </div>
+                </div>
+                <div class="notification-item unread">
+                  <div class="notif-bullet"></div>
+                  <div class="notif-details">
+                    <p class="notif-text">Weekly report is ready! Explore paths aligned with 2026 hiring trends.</p>
+                    <span class="notif-time">1 day ago</span>
+                  </div>
+                </div>
+                <div class="notification-item">
+                  <div class="notif-bullet font-empty"></div>
+                  <div class="notif-details">
+                    <p class="notif-text">Welcome to FuturePath AI! Start your first career trajectory prediction today.</p>
+                    <span class="notif-time">3 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Quick Menu -->
+          <div class="avatar-block">
+            <div class="nav-avatar">AM</div>
+            <span class="nav-username">Alex Mercer</span>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Main Dashboard Grid View -->
+      <main class="dashboard-content">
+        
+        <!-- Welcome Hero Card Section -->
+        <section class="dashboard-hero-section animate-fade-in">
+          <div class="welcome-hero-card">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-card-content">
+              <div class="hero-text-side">
+                <span class="hero-pretitle">Personalized Guidance</span>
+                <h2 class="hero-title">Welcome back, Alex! 👋</h2>
+                <p class="hero-subtitle">Based on your academic profile and logged skill parameters, our AI assessment model projects high aptitude in engineering disciplines. Map your skill metrics to uncover precise career path affinities.</p>
+                <div class="hero-tips">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tip-icon">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  <span>AI Career Tip: Upgrading database modeling skills raises Web & Cloud affinities by 12%.</span>
+                </div>
+              </div>
+              <div class="hero-visual-side">
+                <!-- Premium Floating Mini-Illustration -->
+                <div class="mini-illustration-container">
+                  <div class="glow-orb"></div>
+                  <svg viewBox="0 0 200 200" class="hero-vector" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tech Ring -->
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-dasharray="10, 5" class="rotate-ring" />
+                    <!-- Nodes -->
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+                    <line x1="100" y1="30" x2="100" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+                    <line x1="30" y1="100" x2="170" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+                    
+                    <circle cx="100" cy="30" r="8" fill="#D9F99D" class="pulse-node" />
+                    <circle cx="100" cy="170" r="8" fill="#818CF8" />
+                    <circle cx="30" cy="100" r="8" fill="#818CF8" />
+                    <circle cx="170" cy="100" r="8" fill="#FFFFFF" class="pulse-node-delay" />
+                    
+                    <circle cx="100" cy="100" r="20" fill="#FFFFFF" class="center-core" />
+                    <!-- Pathway lines -->
+                    <path d="M60 60 Q 100 80 140 60" fill="none" stroke="url(#lineGrad)" stroke-width="3" />
+                    <defs>
+                      <linearGradient id="lineGrad" x1="60" y1="60" x2="140" y2="60" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D9F99D"/>
+                        <stop offset="1" stop-color="#818CF8"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Premium Statistics Section -->
+        <section class="stats-section animate-fade-in delay-100">
+          <div class="stats-grid">
+            
+            <!-- Metric Card 1: Overall Compatibility -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Overall Compatibility</span>
+                <div class="metric-icon-wrap bg-light-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="metric-svg color-primary-text">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number">88.5%</span>
+                  <div class="trend-badge positive">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="trend-arrow">
+                      <line x1="12" y1="19" x2="12" y2="5"></line>
+                      <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                    <span>+2.4%</span>
+                  </div>
+                </div>
+                <div class="metric-meta-text">Aptitude index across all categories</div>
+              </div>
+            </div>
+
+            <!-- Metric Card 2: Completed Assessments -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Assessments Run</span>
+                <div class="metric-icon-wrap bg-light-success">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="metric-svg color-success-text">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number">4 <span class="metric-unit">Completed</span></span>
+                </div>
+                <div class="metric-meta-text">Next model update: July 2026</div>
+              </div>
+            </div>
+
+            <!-- Metric Card 3: Skills Tracked -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Skills Verified</span>
+                <div class="metric-icon-wrap bg-light-purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="metric-svg color-purple-text">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number">18 <span class="metric-unit">Skills</span></span>
+                  <div class="trend-badge positive-green">
+                    <span>+4 new</span>
+                  </div>
+                </div>
+                <div class="metric-meta-text">Syncs with school profile logs</div>
+              </div>
+            </div>
+
+            <!-- Metric Card 4: Hiring Velocity -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Market Demand Trend</span>
+                <div class="metric-icon-wrap bg-light-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="metric-svg color-orange-text">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main-graph">
+                  <div class="metric-number-small">High Growth</div>
+                  <!-- Sparkline SVG Graph -->
+                  <div class="sparkline-container">
+                    <svg class="sparkline" viewBox="0 0 100 30" width="80" height="24">
+                      <path d="M0,25 Q15,10 30,22 T60,5 T90,2 T100,8" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" />
+                      <circle cx="90" cy="2" r="3" fill="#F97316" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="metric-meta-text">Hiring index up +14% YoY in 2026</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Quick Actions & Metric Section -->
+        <section class="quick-actions-section animate-fade-in delay-200">
+          <div class="action-card-premium">
+            <div class="action-card-glow"></div>
+            <div class="action-card-content">
+              <div class="action-text-block">
+                <span class="action-badge">Interactive Tool</span>
+                <h3 class="action-card-heading">Run New AI Career Trajectory Model</h3>
+                <p class="action-card-description">Execute an assessment simulation to recalculate your compatibility scores against the latest 2026 industry technical skill requirements. Takes less than 3 minutes.</p>
+              </div>
+              <button class="action-btn-premium" id="startPredictionBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="action-btn-icon">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                <span>Start Prediction</span>
+                <span class="btn-ripple-container"></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Career Categories Grid Section -->
+        <section class="career-categories-section animate-fade-in delay-300">
+          <div class="section-title-row">
+            <div>
+              <h3 class="section-heading">Career Path Affinities</h3>
+              <p class="section-subheading">AI generated category analysis matching your skills, academic records, and career goals.</p>
+            </div>
+            <span class="categories-badge">6 Career Tracks</span>
+          </div>
+
+          <div class="categories-grid" id="categoriesGrid">
+            
+            <!-- Card 1: AI Engineer -->
+            <div class="category-card" data-title="AI Engineer" style="--accent-color: var(--color-primary);">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-ai">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 0 1 7.54 16.59c-.24.28-.59.41-.94.41H5.4c-.35 0-.7-.13-.94-.41A10 10 0 0 1 12 2z"></path>
+                    <path d="M12 14v5"></path>
+                    <path d="M9 19h6"></path>
+                    <path d="M9 10a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"></path>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-high">Hot Market</span>
+                  <span class="affinity-pct">92% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">AI Engineer</h4>
+                <p class="category-description">Design, program, and implement AI pipelines, neural networks, and model fine-tuning architectures to solve complex student and enterprise workflows.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">82%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-ai-fill" style="width: 82%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Data Scientist -->
+            <div class="category-card" data-title="Data Scientist" style="--accent-color: #8B5CF6;">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-ds">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-medium">High Growth</span>
+                  <span class="affinity-pct text-secondary">88% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">Data Scientist</h4>
+                <p class="category-description">Interpret massive structured datasets, deploy custom regression models, and design dashboard metrics to unlock business insights and product statistics.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">76%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-ds-fill" style="width: 76%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: Web Developer -->
+            <div class="category-card" data-title="Web Developer" style="--accent-color: var(--color-success);">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-wd">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                    <line x1="14" y1="4" x2="10" y2="20"></line>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-high">Steady Market</span>
+                  <span class="affinity-pct">94% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">Web Developer</h4>
+                <p class="category-description">Develop modern, fast, and accessible single-page web applications utilizing robust frontend tools and secure asynchronous backend API pathways.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">90%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-wd-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4: Cyber Security Analyst -->
+            <div class="category-card" data-title="Cyber Security Analyst" style="--accent-color: var(--color-error);">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-cs">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-high">Extreme Demand</span>
+                  <span class="affinity-pct text-muted">64% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">Cyber Security Analyst</h4>
+                <p class="category-description">Monitor digital infrastructure integrity, establish zero-trust policies, and prevent unauthorized credential bypass or network injection attacks.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">52%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-cs-fill" style="width: 52%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5: UI/UX Designer -->
+            <div class="category-card" data-title="UI/UX Designer" style="--accent-color: #F97316;">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-uiux">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M12 6a3.5 3.5 0 0 0-3.5 3.5c0 3 3.5 6.5 3.5 6.5s3.5-3.5 3.5-6.5A3.5 3.5 0 0 0 12 6z"></path>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-medium">High Demand</span>
+                  <span class="affinity-pct text-secondary">78% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">UI/UX Designer</h4>
+                <p class="category-description">Design aesthetic visual systems, build high-fidelity interface wireframes, and design layout flows centered on premium user interactions.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">68%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-uiux-fill" style="width: 68%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6: Cloud Engineer -->
+            <div class="category-card" data-title="Cloud Engineer" style="--accent-color: #0EA5E9;">
+              <div class="card-accent-bar"></div>
+              <div class="card-top">
+                <div class="category-icon-wrapper color-cloud">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+                <div class="badge-stack">
+                  <span class="category-demand-badge demand-high">Hot Sector</span>
+                  <span class="affinity-pct text-secondary">82% Match</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4 class="category-title">Cloud Engineer</h4>
+                <p class="category-description">Establish serverless backend architectures, set up cloud computing services, and orchestrate containerized build structures for production scaling.</p>
+                
+                <!-- Skill Match Meter -->
+                <div class="skill-meter-block">
+                  <div class="meter-info">
+                    <span class="meter-label">Skill compatibility</span>
+                    <span class="meter-val">74%</span>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill color-cloud-fill" style="width: 74%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="explore-path-link">
+                  <span>Explore Trajectory</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Model Insights Section -->
+        <section class="model-insights-section animate-fade-in delay-300" id="modelInsightsSection">
+          <div class="section-title-row">
+            <div>
+              <h3 class="section-heading">Model Insights</h3>
+              <p class="section-subheading">Performance evaluation and parameters calculated from the active Decision Tree Classifier.</p>
+            </div>
+            <span class="categories-badge">Active Engine</span>
+          </div>
+
+          <div class="stats-grid" style="margin-top: 1.5rem;">
+            <!-- Dataset Size Card -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Dataset Size</span>
+                <div class="metric-icon-wrap bg-light-primary">
+                  <svg class="metric-svg color-primary-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number" id="insight-dataset-size">250 <span class="metric-unit">Records</span></span>
+                </div>
+                <div class="metric-meta-text">Total Career CSV dataset size</div>
+              </div>
+            </div>
+
+            <!-- Training Data Card -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Training Data</span>
+                <div class="metric-icon-wrap bg-light-purple">
+                  <svg class="metric-svg color-purple-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number" id="insight-train-size">200 <span class="metric-unit">Records</span></span>
+                  <div class="trend-badge positive-green">
+                    <span id="insight-train-pct">80%</span>
+                  </div>
+                </div>
+                <div class="metric-meta-text">Supervised training split subset</div>
+              </div>
+            </div>
+
+            <!-- Testing Data Card -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Testing Data</span>
+                <div class="metric-icon-wrap bg-light-orange">
+                  <svg class="metric-svg color-orange-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="22" y1="12" x2="18" y2="12"></line>
+                    <line x1="6" y1="12" x2="2" y2="12"></line>
+                    <line x1="12" y1="6" x2="12" y2="2"></line>
+                    <line x1="12" y1="22" x2="12" y2="18"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number" id="insight-test-size">50 <span class="metric-unit">Records</span></span>
+                  <div class="trend-badge positive-green" style="background-color: var(--color-secondary-light); color: var(--color-primary);">
+                    <span id="insight-test-pct">20%</span>
+                  </div>
+                </div>
+                <div class="metric-meta-text">Classifier validation testing subset</div>
+              </div>
+            </div>
+
+            <!-- Model Accuracy Card -->
+            <div class="stat-metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-title">Model Accuracy</span>
+                <div class="metric-icon-wrap bg-light-success">
+                  <svg class="metric-svg color-success-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-body">
+                <div class="metric-main">
+                  <span class="metric-number" id="insight-accuracy">100%</span>
+                </div>
+                <div class="metric-meta-text">Out-of-sample accuracy index</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent Predictions Table Section -->
+        <section class="predictions-table-section animate-fade-in delay-400">
+          <div class="section-title-row">
+            <div>
+              <h3 class="section-heading">Recent Career Model Predictions</h3>
+              <p class="section-subheading">History of assessments and calculations generated by the AI career routing engine.</p>
+            </div>
+            <a href="#" class="view-all-link">View all history</a>
+          </div>
+
+          <div class="table-card">
+            <div class="table-wrapper">
+              <table class="predictions-table">
+                <thead>
+                  <tr>
+                    <th>Career Category Target</th>
+                    <th>Assessment Date</th>
+                    <th>Aptitude Match</th>
+                    <th>Status</th>
+                    <th class="text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="table-career-name">
+                        <div class="tiny-icon color-ai">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <span>AI Engineer (Specialist Track)</span>
+                      </div>
+                    </td>
+                    <td>June 18, 2026</td>
+                    <td>
+                      <div class="aptitude-score">
+                        <span class="score-num font-bold">92%</span>
+                        <div class="score-indicator score-high"></div>
+                      </div>
+                    </td>
+                    <td><span class="status-badge badge-active">Active</span></td>
+                    <td class="text-right"><button class="view-report-btn">View Report</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-career-name">
+                        <div class="tiny-icon color-wd">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <span>Web Developer (Full Stack Route)</span>
+                      </div>
+                    </td>
+                    <td>June 15, 2026</td>
+                    <td>
+                      <div class="aptitude-score">
+                        <span class="score-num font-bold">94%</span>
+                        <div class="score-indicator score-high"></div>
+                      </div>
+                    </td>
+                    <td><span class="status-badge badge-active">Active</span></td>
+                    <td class="text-right"><button class="view-report-btn">View Report</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-career-name">
+                        <div class="tiny-icon color-ds">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line></svg>
+                        </div>
+                        <span>Data Scientist (ML Pipelines)</span>
+                      </div>
+                    </td>
+                    <td>June 05, 2026</td>
+                    <td>
+                      <div class="aptitude-score">
+                        <span class="score-num">88%</span>
+                        <div class="score-indicator score-med"></div>
+                      </div>
+                    </td>
+                    <td><span class="status-badge badge-historical">Historical</span></td>
+                    <td class="text-right"><button class="view-report-btn">View Report</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-career-name">
+                        <div class="tiny-icon color-cs">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect></svg>
+                        </div>
+                        <span>Cyber Security Analyst (Intro)</span>
+                      </div>
+                    </td>
+                    <td>May 24, 2026</td>
+                    <td>
+                      <div class="aptitude-score">
+                        <span class="score-num">64%</span>
+                        <div class="score-indicator score-low"></div>
+                      </div>
+                    </td>
+                    <td><span class="status-badge badge-archived">Archived</span></td>
+                    <td class="text-right"><button class="view-report-btn">View Report</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Dashboard Footer -->
+      <footer class="dashboard-footer-bar">
+        <p>© 2026 FuturePath AI. All rights reserved. Guiding academic and career success through intelligent analytics.</p>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Custom JS for Dashboard -->
+  <script src="shared.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

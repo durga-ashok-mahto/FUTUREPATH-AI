@@ -1,0 +1,11 @@
+{
+    "dataset_size": 250,
+    "training_size": 200,
+    "testing_size": 50,
+    "accuracy": 100.0,
+    "algorithm": "Decision Tree Classifier",
+    "learning_type": "Supervised Learning",
+    "dataset_type": "Career Prediction Dataset (CSV)",
+    "evaluation_method": "Train-Test Split",
+    "purpose": "Predict the most suitable career path based on student skills and interests"
+}

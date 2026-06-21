@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result | FuturePath AI</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+  
+  <div class="dashboard-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo-wrapper">
+          <svg class="sidebar-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L4 14L24 24L44 14L24 4Z" fill="url(#sidebarLogoGrad)" />
+            <path d="M4 24V34L24 44V34L4 24Z" fill="#4F46E5" />
+            <path d="M44 24V34L24 44V34L44 24Z" fill="#818CF8" />
+            <defs>
+              <linearGradient id="sidebarLogoGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4F46E5" />
+                <stop offset="1" stop-color="#818CF8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-name">FuturePath AI</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-menu">
+        <a href="dashboard.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          <span>Career Explorer</span>
+        </a>
+        <a href="prediction.html" class="menu-item active">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span>Predictions</span>
+        </a>
+        <a href="documentation.html" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Documentation</span>
+        </a>
+        <a href="#" class="menu-item">
+          <div class="menu-indicator"></div>
+          <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Info / Logout -->
+      <div class="sidebar-footer">
+        <div class="user-block">
+          <div class="sidebar-avatar">AM</div>
+          <div class="user-details">
+            <span class="user-name">Alex Mercer</span>
+            <span class="user-role">Student account</span>
+          </div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <svg class="logout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      
+      <!-- Top Navigation Header -->
+      <header class="top-nav">
+        <!-- Sidebar Toggle Hamburger (Mobile only) -->
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search result details..." class="search-input" disabled>
+        </div>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          
+          <!-- Alerts Bell -->
+          <div class="alert-bell-container" id="notificationBtn">
+            <button class="bell-btn" aria-label="Notifications">
+              <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="bell-badge" style="display: none;">0</span>
+            </button>
+          </div>
+
+          <!-- User Quick Menu -->
+          <div class="avatar-block">
+            <div class="nav-avatar">AM</div>
+            <span class="nav-username">Alex Mercer</span>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Main Result Content -->
+      <main class="dashboard-content">
+        
+        <!-- Back Navigation Control -->
+        <div class="result-navigation animate-fade-in">
+          <a href="prediction.html" class="back-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="back-arrow-icon">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Assessment</span>
+          </a>
+        </div>
+
+        <!-- Large Premium Result Card -->
+        <section class="result-hero-section animate-fade-in delay-100">
+          <div class="premium-result-card" id="careerAccentCard">
+            <div class="result-card-glow"></div>
+            <div class="result-card-inner">
+              
+              <!-- Predicted Career Info Panel -->
+              <div class="result-career-panel">
+                <span class="result-badge-pill" id="careerDomain">Domain Discipline</span>
+                <div class="result-title-row">
+                  <div class="result-icon-box" id="careerIconWrap">
+                    <!-- Dynamic inline SVG will be injected here -->
+                  </div>
+                  <div class="result-title-text">
+                    <span class="result-pretitle">Your Optimal Trajectory</span>
+                    <h1 class="result-career-title" id="careerTitle">Loading Career...</h1>
+                  </div>
+                </div>
+                <p class="result-career-description" id="careerDescription">
+                  Calculating model outcomes and mapping matching career descriptions to your profile attributes.
+                </p>
+              </div>
+
+              <!-- Confidence Score Gauge Panel -->
+              <div class="result-gauge-panel">
+                <div class="gauge-card">
+                  <div class="radial-gauge-container">
+                    <svg class="radial-gauge" viewBox="0 0 120 120">
+                      <!-- Base circle track -->
+                      <circle class="gauge-track" cx="60" cy="60" r="50" fill="none" stroke="#F1F5F9" stroke-width="8" />
+                      <!-- Score fill path -->
+                      <circle class="gauge-fill" id="radialGaugeFill" cx="60" cy="60" r="50" fill="none" stroke="url(#gaugeGradient)" stroke-width="8" stroke-dasharray="314.15" stroke-dashoffset="314.15" stroke-linecap="round" />
+                      <defs>
+                        <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#4F46E5" />
+                          <stop offset="100%" stop-color="#818CF8" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <!-- Floating percentage label -->
+                    <div class="radial-percentage-overlay">
+                      <span class="radial-score-num" id="confidenceScoreVal">0%</span>
+                      <span class="radial-score-label">Affinity Match</span>
+                    </div>
+                  </div>
+                  
+                  <div class="gauge-status-block">
+                    <span class="gauge-status-pill badge-active" id="alignmentStatus">High Compatibility</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Required Skills & Outlook Section -->
+        <section class="result-skills-outlook-grid animate-fade-in delay-200">
+          
+          <!-- Required Skills Block -->
+          <div class="skills-card-premium">
+            <div class="block-header">
+              <h3 class="block-title">Required Career Competencies</h3>
+              <p class="block-subtitle">Target skill domains to build matching compatibility for technical hiring pipelines.</p>
+            </div>
+            
+            <div class="skills-lists-wrapper">
+              
+              <!-- Technical Core Skills -->
+              <div class="skills-category-group">
+                <h4 class="skills-group-title">Technical Core Skills</h4>
+                <div class="skills-pill-deck" id="techSkillsDeck">
+                  <!-- Skill pills injected dynamically -->
+                </div>
+              </div>
+
+              <!-- Power / Professional Skills -->
+              <div class="skills-category-group">
+                <h4 class="skills-group-title">Critical Professional Skills</h4>
+                <div class="skills-pill-deck" id="powerSkillsDeck">
+                  <!-- Skill pills injected dynamically -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Growth Outlook Block -->
+          <div class="outlook-card-premium">
+            <div class="block-header">
+              <h3 class="block-title">Career Trajectory Growth Outlook</h3>
+              <p class="block-subtitle">Market velocity and monetary stats compiled from 2026 technical job datasets.</p>
+            </div>
+
+            <div class="outlook-metrics-grid">
+              
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Hiring Index demand</span>
+                <div class="outlook-metric-value-row">
+                  <span class="outlook-metric-number text-green" id="growthDemand">Highly Demanded</span>
+                </div>
+                <p class="outlook-meta-text">Steady market expansion in modern systems.</p>
+              </div>
+
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Avg Starting Salary</span>
+                <div class="outlook-metric-value-row">
+                  <span class="outlook-metric-number" id="startingSalary">$95,000 - $120,000</span>
+                </div>
+                <p class="outlook-meta-text">Median base salary for entry-level positions.</p>
+              </div>
+
+              <div class="outlook-metric-box full-width">
+                <span class="outlook-metric-label">Hiring Velocity (Past 5 Years)</span>
+                <div class="outlook-line-chart-block">
+                  <div class="chart-label-numbers" id="growthRate">+28% YoY</div>
+                  <div class="sparkline-container fill-width">
+                    <svg class="sparkline-large" viewBox="0 0 200 40" width="100%" height="32">
+                      <path d="M0,35 Q30,10 60,30 T120,8 T180,4 T200,12" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" />
+                      <circle cx="180" cy="4" r="3.5" fill="#10B981" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- AI Model Analysis & Performance Section -->
+        <section class="result-skills-outlook-grid animate-fade-in delay-250" style="margin-top: 1.5rem;">
+          
+          <!-- AI Model Performance Card -->
+          <div class="skills-card-premium">
+            <div class="block-header">
+              <h3 class="block-title">AI Model Performance</h3>
+              <p class="block-subtitle">Evaluation metrics calculated dynamically from the latest trained pipeline.</p>
+            </div>
+            
+            <div class="outlook-metrics-grid" style="margin-top: 1.5rem;">
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Classification Algorithm</span>
+                <span class="outlook-metric-number" style="font-size: 1.15rem; font-weight: 800; color: var(--color-primary);" id="result-algorithm">Decision Tree Classifier</span>
+              </div>
+              
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Dataset Size</span>
+                <span class="outlook-metric-number" style="font-size: 1.25rem; font-weight: 800;" id="result-dataset-size">250 Records</span>
+              </div>
+
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Train-Test Split</span>
+                <span class="outlook-metric-number" style="font-size: 1.15rem; font-weight: 800; color: var(--color-text-muted);" id="result-split">80% Train / 20% Test</span>
+              </div>
+
+              <div class="outlook-metric-box">
+                <span class="outlook-metric-label">Model Accuracy</span>
+                <span class="outlook-metric-number text-green" style="font-size: 1.35rem; font-weight: 800;" id="result-accuracy">100.0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- About the AI Model Card -->
+          <div class="outlook-card-premium">
+            <div class="block-header">
+              <h3 class="block-title">About the AI Model</h3>
+              <p class="block-subtitle">High-level details of the classifier architecture and objective.</p>
+            </div>
+            
+            <div class="outlook-metrics-grid" style="margin-top: 1.5rem; gap: 1rem;">
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <span class="outlook-metric-label" style="text-transform: uppercase; font-size: 0.725rem;">Learning Type</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: var(--color-text);" id="result-learning-type">Supervised Learning</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <span class="outlook-metric-label" style="text-transform: uppercase; font-size: 0.725rem;">Dataset Type</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: var(--color-text);" id="result-dataset-type">Career Prediction Dataset (CSV)</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <span class="outlook-metric-label" style="text-transform: uppercase; font-size: 0.725rem;">Evaluation Method</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: var(--color-text);" id="result-evaluation-method">Train-Test Split</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.25rem; grid-column: span 2;">
+                <span class="outlook-metric-label" style="text-transform: uppercase; font-size: 0.725rem;">Objective Purpose</span>
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); line-height: 1.4;" id="result-purpose">Predict suitable career path based on student skills and interests.</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Learning Roadmap Section -->
+        <section class="roadmap-section animate-fade-in delay-300">
+          <div class="block-header">
+            <h3 class="block-title">AI Academic & Project Learning Roadmap</h3>
+            <p class="block-subtitle">Recommended milestone timeline mapped to accelerate your learning curve.</p>
+          </div>
+
+          <div class="timeline-container">
+            
+            <!-- Phase 1 -->
+            <div class="timeline-item">
+              <div class="timeline-icon color-ai">1</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-phase">Phase 1</span>
+                  <span class="timeline-duration" id="phase1Time">Months 1-3</span>
+                </div>
+                <h4 class="timeline-title" id="phase1Title">Foundational Training</h4>
+                <p class="timeline-description" id="phase1Desc">
+                  Focus on mastering core programming concepts, relational databases, and baseline toolkits.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="timeline-item">
+              <div class="timeline-icon color-cloud">2</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-phase">Phase 2</span>
+                  <span class="timeline-duration" id="phase2Time">Months 4-6</span>
+                </div>
+                <h4 class="timeline-title" id="phase2Title">Deep Architecture & Projects</h4>
+                <p class="timeline-description" id="phase2Desc">
+                  Construct complete project systems, utilize advanced frameworks, and deploy codebases.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="timeline-item">
+              <div class="timeline-icon color-wd">3</div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-phase">Phase 3</span>
+                  <span class="timeline-duration" id="phase3Time">Months 7-12</span>
+                </div>
+                <h4 class="timeline-title" id="phase3Title">Portfolio & Industry Sync</h4>
+                <p class="timeline-description" id="phase3Desc">
+                  Compile project portfolios, prepare for technical screenings, and apply for roles.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Action Options Footer -->
+        <section class="result-actions-footer animate-fade-in delay-400">
+          <button class="action-btn-large outline-btn" id="reAssessBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="action-btn-icon">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span>Run Assessment Again</span>
+          </button>
+          <button class="action-btn-large" id="downloadPdfBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="action-btn-icon">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+            </svg>
+            <span>Download Roadmap PDF</span>
+            <span class="btn-ripple-container"></span>
+          </button>
+        </section>
+
+      </main>
+
+      <!-- Dashboard Footer -->
+      <footer class="dashboard-footer-bar">
+        <p>© 2026 FuturePath AI. All rights reserved. Guiding academic and career success through intelligent analytics.</p>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Custom JS for Results -->
+  <script src="shared.js"></script>
+  <script src="result.js"></script>
+</body>
+</html>
